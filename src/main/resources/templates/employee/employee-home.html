@@ -9,10 +9,6 @@
 <ul th:replace="page-layout :: employeeNavBar"></ul>
 	
 	<div class="container">
-		<h2 th:text="${'Welcome' + ' ' + currentUser.getFirstName + ' ' + currentUser.getLastName}"></h2>
-	</div>
-	
-	<div class="container">
 		<h3>Notifications</h3>
 		
 		<div th:if="${currentUser.notifications.size() == 0}">
