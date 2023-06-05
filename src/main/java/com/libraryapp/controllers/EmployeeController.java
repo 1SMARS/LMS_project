@@ -287,11 +287,6 @@ public class EmployeeController {
 			return "redirect:/employee/booksreturned";
 		}
 
-		@GetMapping(value="/booksreturned")
-		public String booksReturned() {
-			return "employee/employee-books-returned.html";
-		}
-
 		@GetMapping(value="/reservations")
 		public String reservations(Model model) {
 			model.addAttribute("unprocessedReservations", bookService.getUnprocessedBookReservations());
