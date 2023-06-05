@@ -220,12 +220,6 @@ public class EmployeeController {
 			return "redirect:/employee/ordersaved";
 		}
 
-		@GetMapping(value="/ordersaved")
-		public String orderSaved() {
-			return "employee/employee-order-saved.html";
-		}
-
-
 		@GetMapping(value="/returnedbooks")
 		public String returnedBooks(@RequestParam (required = false) Long userId,
 									@RequestParam (required = false) String firstName,
