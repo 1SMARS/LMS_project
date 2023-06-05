@@ -8,19 +8,28 @@
 <body>
 
 	<div class="container">
-		<h3>Pay reservation</h3>
-		<img src="/Images/payment-icons.png" alt="Payment icons...">
+		<h3>Confirm reservation</h3>
+
+		<span>
+			<p>Please note that reserving a book doesn't mean you can pick it up right away. <br>
+				You will receive a notification on this account when an employee of the library has put it aside for you. It could also happen that the current<br>
+				user of a book doesn't return the book in time, which will result in an expired reservation. In that case your reservation will be canceled.</p>
+		</span>
 		
 		<div class="row">
-			<div class="col-75">
-				<p>Total costs: <text th:text="${'KGS ' + amountToPay}"></text>00</p>
+<!--			<div class="col-75">-->
+<!--				<p>Total costs: <text th:text="${'KGS ' + amountToPay}"></text>00</p>-->
+<!--			</div>-->
+
+			<div class="col-50">
+				<p>Are you sure ?</p>
 			</div>
 		</div>
-		
+
 		<div class="row">
 			<div class="col-75">
-				<form th:action="@{/user/browsebooks/savereservation}" th:method="PUT">	
-					<input type="submit" value="Pay and complete reservation" style="width: 200px">
+				<form th:action="@{/user/browsebooks/savereservation}" th:method="PUT">
+					<input type="submit" value="Complete reservation" style="width: 200px">
 					<input type="hidden" value="PUT" name="_method">
 					<input type="hidden" th:value="${reservedBookIdsInString}" th:name="reservedBookIdsInString">
 				</form>
